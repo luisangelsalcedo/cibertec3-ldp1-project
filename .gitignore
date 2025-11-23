@@ -1,1 +1,13 @@
-/build/
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Compiled Java classes
+bin/
+build/
+*.class
+
+# IDE-specific files
+.DS_Store
+Thumbs.db
