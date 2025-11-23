@@ -9,9 +9,9 @@
 <body>
 	<h1>Grupo 1</h1>]
 	<ol>	
-		<li>Daniel Llacctarimay</li>
-		<li>Jack Ríos Cuenca</li>
-		<li>Jhosias Uriel Pasmiño</li>
+		<li>Daniel Llacctarimay - project</li>
+		<li>Jack Rï¿½os Cuenca</li>
+		<li>Jhosias Uriel Pasmiï¿½o</li>
 		<li>Julio Sebastian Chipana</li>
 		<li>Luis Angel Salcedo</li>
 	</ol>
