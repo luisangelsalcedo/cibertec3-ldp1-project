@@ -10,7 +10,7 @@
 	<h1>Grupo 1</h1>]
 	<ol>	
 		<li>Daniel Llacctarimay - project</li>
-		<li>Jack R�os Cuenca</li>
+		<li>Jack Rios Cuenca - project</li>
 		<li>Jhosias Uriel Pasmi�o</li>
 		<li>Julio Sebastian Chipana</li>
 		<li>Luis Angel Salcedo</li>
