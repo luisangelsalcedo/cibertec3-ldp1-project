@@ -5,15 +5,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Grupo 1</title>
+<style type="text/css">
+code li{color: darkorange}
+code li i{color: gray}
+</style>
 </head>
 <body>
-	<h1>Grupo 1</h1>]
-	<ol>	
-		<li>Daniel Llacctarimay - project</li>
-		<li>Jack Rios Cuenca - project</li>
-		<li>Jhosias Uriel Pasmi�o</li>
-		<li>Julio Sebastian Chipana</li>
-		<li>Luis Angel Salcedo</li>
-	</ol>
+	<h1>eParking</h1>	
 </body>
 </html>
