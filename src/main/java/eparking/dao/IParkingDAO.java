@@ -1,0 +1,12 @@
+package eparking.dao;
+
+import java.util.List;
+
+import eparking.model.Parking;
+
+public interface IParkingDAO {
+	void insertParking(Parking parking);	
+	void updateParking(Parking parking);
+	List<Parking> getAllParkings();
+	Parking findParkingById(int id);
+}
