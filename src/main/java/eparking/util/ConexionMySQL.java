@@ -1,7 +1,9 @@
 package eparking.util;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 
 public class ConexionMySQL {
 	public static Connection getConnection() {
@@ -23,4 +25,41 @@ public class ConexionMySQL {
 		return connection;
 
 	}
+	
+	public static void close(CallableStatement callableStatement) {
+
+		if (callableStatement != null) {
+			try {
+				callableStatement.close();
+			} catch (Exception e) {
+				e.printStackTrace(System.out);
+			}
+		}
+
+	}
+
+	public static void close(Connection connection) {
+
+		if (connection != null) {
+			try {
+				connection.close();
+			} catch (Exception e) {
+				e.printStackTrace(System.out);
+			}
+		}
+
+	}
+
+	public static void close(ResultSet resultSet) {
+
+		if (resultSet != null) {
+			try {
+				resultSet.close();
+			} catch (Exception e) {
+				e.printStackTrace(System.out);
+			}
+		}
+
+	}
+
 }
