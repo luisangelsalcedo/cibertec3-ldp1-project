@@ -31,7 +31,7 @@ public class UserDAO implements IUserDAO {
                 user.setName(rs.getString("name"));
                 user.setUserName(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
-                user.setPermission(Permission.valueOf(rs.getString("permission")));
+                user.setPermission(Permission.fromName(rs.getString("permission")));
                 user.setLoginAttempt(rs.getInt("login_attempt"));
                 user.setUserLock(rs.getBoolean("user_lock"));
 
@@ -51,7 +51,7 @@ public class UserDAO implements IUserDAO {
 
     @Override
     public User findUserByUserName(String userName) {
-        User user = null;
+      
         Connection connection = null;
         CallableStatement statement = null;
         ResultSet rs = null;
@@ -63,14 +63,24 @@ public class UserDAO implements IUserDAO {
 
             rs = statement.executeQuery();
             if (rs.next()) {
-                user = new User();
+            	
+            	User user;
+            	String password = rs.getString("password");
+                String permissionName = rs.getString("permission");
+                Permission permission = Permission.fromName(permissionName);
+                
+                if(permission.equals(Permission.ADMIN)) {
+                	user = User.createAdmin(userName, password);
+                } else {
+                	user = User.createUser(userName, password);
+                }
+                
                 user.setId(rs.getInt("id_user"));
                 user.setName(rs.getString("name"));
-                user.setUserName(rs.getString("username"));
-                user.setPassword(rs.getString("password"));
-                user.setPermission(Permission.valueOf(rs.getString("permission")));
                 user.setLoginAttempt(rs.getInt("login_attempt"));
                 user.setUserLock(rs.getBoolean("user_lock"));
+               
+                return user;
             }
 
         } catch (Exception e) {
@@ -81,7 +91,7 @@ public class UserDAO implements IUserDAO {
             ConexionMySQL.close(connection);
         }
 
-        return user;
+        return null;
     }
 
     @Override
@@ -132,7 +142,7 @@ public class UserDAO implements IUserDAO {
             statement.setString(1, user.getName());
             statement.setString(2, user.getUserName());
             statement.setString(3, user.getPassword());
-            statement.setString(4, user.getPermission().name());
+            statement.setString(4, user.getPermission().toString());
             statement.setInt(5, user.getLoginAttempt());
             statement.setBoolean(6, user.isUserLock());
 
@@ -165,7 +175,7 @@ public class UserDAO implements IUserDAO {
             statement.setString(2, user.getName());
             statement.setString(3, user.getUserName());
             statement.setString(4, user.getPassword());
-            statement.setString(5, user.getPermission().name());
+            statement.setString(5, user.getPermission().toString());
             statement.setInt(6, user.getLoginAttempt());
             statement.setBoolean(7, user.isUserLock());
 
