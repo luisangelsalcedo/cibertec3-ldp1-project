@@ -31,7 +31,7 @@ private IUserDAO userDao;
 	}
 	
 	// methods
-	public void login(User user) {
+	public User login(User user) {
 		User userFound = userDao.findUserByUserName(user.getUserName());
 		
 		if(userFound == null) {
@@ -47,6 +47,8 @@ private IUserDAO userDao;
 		userFound.loginAttempt = 0; //reset attempt
 		setLoggedUser(userFound);
 		userDao.updateUser(userFound);
+		
+		return userFound;
 	}
 	
 	public static void logout() {
@@ -59,6 +61,7 @@ private IUserDAO userDao;
 	}
 	
 	private boolean hasTooManyAttempts(User user) {
+		
 		if(user.getPermission() == Permission.ADMIN) return false;
 		
 		user.loginAttempt++;
