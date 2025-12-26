@@ -1,6 +1,7 @@
 package eparking.service;
 
 import eparking.dao.IUserDAO;
+import eparking.dao.UserDAO;
 import eparking.enums.Permission;
 import eparking.model.User;
 
@@ -15,8 +16,8 @@ private IUserDAO userDao;
 		setLoggedUser(null);
 	}
 	
-	public AuthService(IUserDAO userDao) {
-		this.userDao = userDao;
+	public AuthService() {
+		this.userDao = new UserDAO();
 	}
 	
 	// getters
