@@ -1,55 +1,54 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <link rel="icon" type="image/svg+xml"
-        href="<%= request.getContextPath() %>/favicon.svg" />
-  <title>Nueva Reserva</title>
-
-  <style>
-    @font-face {
+<html lang="en" data-astro-cid-sckkx6r4>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="<%= request.getContextPath() %>/dist/favicon.svg" />
+    <meta name="generator" content="Astro v5.16.6" />
+    <title>Astro Basics</title>
+    <style>
+      @font-face {
         font-family: Lexend, sans-serif;
         font-weight: 200;
         font-style: normal;
-        src: url(../_astro/Lexend-ExtraLight.9KLIkcKL.ttf) format("truetype");
+        src: url(./dist/_astro/Lexend-ExtraLight.9KLIkcKL.ttf) format("truetype");
       }
       @font-face {
         font-family: Lexend, sans-serif;
         font-weight: 300;
         font-style: normal;
-        src: url(../_astro/Lexend-Light.CljLvlWl.ttf) format("truetype");
+        src: url(./dist/_astro/Lexend-Light.CljLvlWl.ttf) format("truetype");
       }
       @font-face {
         font-family: Lexend, sans-serif;
         font-weight: 400;
         font-style: normal;
-        src: url(../_astro/Lexend-Regular.peUU6jwM.ttf) format("truetype");
+        src: url(./dist/_astro/Lexend-Regular.peUU6jwM.ttf) format("truetype");
       }
       @font-face {
         font-family: Lexend, sans-serif;
         font-weight: 500;
         font-style: normal;
-        src: url(../_astro/Lexend-Medium.B4Ng5Mcm.ttf) format("truetype");
+        src: url(./dist/_astro/Lexend-Medium.B4Ng5Mcm.ttf) format("truetype");
       }
       @font-face {
         font-family: Lexend, sans-serif;
         font-weight: 600;
         font-style: normal;
-        src: url(../_astro/Lexend-SemiBold.B1FI2Xqt.ttf) format("truetype");
+        src: url(./dist/_astro/Lexend-SemiBold.B1FI2Xqt.ttf) format("truetype");
       }
       @font-face {
         font-family: Lexend, sans-serif;
         font-weight: 700;
         font-style: normal;
-        src: url(../_astro/Lexend-Bold.BHD1AiDd.ttf) format("truetype");
+        src: url(./dist/_astro/Lexend-Bold.BHD1AiDd.ttf) format("truetype");
       }
       @font-face {
         font-family: Lexend, sans-serif;
         font-weight: 800;
         font-style: normal;
-        src: url(../_astro/Lexend-ExtraBold.IeePgDw2.ttf) format("truetype");
+        src: url(./dist/_astro/Lexend-ExtraBold.IeePgDw2.ttf) format("truetype");
       }
       * {
         padding: 0;
@@ -92,6 +91,7 @@
         text-align: var(--align);
       }
       .simple-button[data-astro-cid-quglckyz] {
+        text-align: center;
         outline: none;
         padding: 0.7em 2em;
         border-radius: 0.4em;
@@ -99,6 +99,7 @@
         margin-bottom: 0.4em;
         background-color: transparent;
         text-decoration: none;
+        font-size: 0.9em;
       }
       .simple-button[data-astro-cid-quglckyz]:hover {
         text-decoration: none;
@@ -269,13 +270,13 @@
           .flex[data-astro-cid-ithn625t] {
           flex-direction: column-reverse;
         }
-  </style>
-</head>
-
-<body>
-<div class="general-page-component">
-  <div class="general-page-component-header">
-    <svg
+      }
+    </style>
+  </head>
+  <body data-astro-cid-sckkx6r4>
+    <div class="general-page-component">
+      <div class="general-page-component-header">
+        <svg
           width="311"
           height="113"
           fill="none"
@@ -292,101 +293,315 @@
             d="M35.041 30.862v58.88h42.924v-14.31H49.351v-7.978h28.614V53.15H49.351v-7.978h14.304v-14.31z"
           />
         </svg>
-  </div>
-
-  <div class="container-component">
-
-    <div class="welcome-component">
-      <div class="welcome-component-name">
-        <b>Bienvenido</b>
-        <%= session.getAttribute("usuario") != null
-              ? session.getAttribute("usuario")
-              : "Luis Angel Salcedo Gavidia" %>
       </div>
-      <div class="welcome-component-avatar">LA</div>
-    </div>
 
-    <div class="panel-component">
-      <div class="create-reservation">
-
-        <h3 class="main-title" style="--align:left">
-          Nueva Reserva
-        </h3>
-
-        <form class="form"
-              method="post"
-              action="<%= request.getContextPath() %>/ReservaServlet">
-
-          <div class="form-group">
-            <label>
-              <span>Fecha de reserva</span>
-              <input class="form-control"
-                     type="date"
-                     name="fecha" />
-            </label>
+      <div class="container-component" data-astro-cid-d6puh33w>
+        <div class="welcome-component" data-astro-cid-mmc7otgs>
+          <div class="welcome-component-name" data-astro-cid-mmc7otgs>
+            <b data-astro-cid-mmc7otgs>Bienvenido</b> Luis Angel Salcedo Gavidia
           </div>
+          <div class="welcome-component-avatar" data-astro-cid-mmc7otgs>LA</div>
+        </div>
+        <div class="panel-component" data-astro-cid-u23vcbo2>
+          <div class="create-reservation" data-astro-cid-ithn625t>
+            <h3
+              class="main-title"
+              data-astro-cid-aup47j5x
+              style="--align: left"
+            >
+              Nueva Reserva
+            </h3>
 
-          <b>Selecciona un estacionamiento libre</b>
-
-          <div class="create-reservation-select">
-
-            <%-- ESTACIONAMIENTO 01 (OCUPADO) --%>
-            <div class="select-reservation">
-              <label>
-                <input type="radio" name="parking" value="1" disabled />
-                <div class="parking">
-                  <div class="number">01</div>
-                  <img src="<%= request.getContextPath() %>/assets/img/car.webp"
-                       alt="car" />
-                </div>
-              </label>
-            </div>
-
-            <%-- ESTACIONAMIENTO 02 (OCUPADO) --%>
-            <div class="select-reservation">
-              <label>
-                <input type="radio" name="parking" value="2" disabled />
-                <div class="parking">
-                  <div class="number">02</div>
-                  <img src="<%= request.getContextPath() %>/assets/img/car.webp"
-                       alt="car" />
-                </div>
-              </label>
-            </div>
-
-            <%-- DISPONIBLES --%>
-            <% for(int i = 3; i <= 14; i++) { %>
-              <div class="select-reservation">
-                <label>
-                  <input type="radio" name="parking" value="<%= i %>" />
-                  <div class="parking">
-                    <div class="number"><%= String.format("%02d", i) %></div>
-                    <img src="<%= request.getContextPath() %>/assets/img/car.webp"
-                         alt="car" />
-                  </div>
+            <form class="form" data-astro-cid-ithn625t>
+              <div class="form-group" data-astro-cid-atrthr4o>
+                <label data-astro-cid-atrthr4o>
+                  <span data-astro-cid-atrthr4o>Fecha de reserva</span>
+                  <input
+                    class="form-control"
+                    type="date"
+                    name="reservar"
+                    data-astro-cid-ithn625t="true"
+                    data-astro-cid-atrthr4o
+                  />
+                  <span class="form-error" data-astro-cid-atrthr4o></span>
                 </label>
               </div>
-            <% } %>
 
+              <b data-astro-cid-ithn625t>Selecciona un estacionamiento libre</b>
+              <div class="create-reservation-select" data-astro-cid-ithn625t>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" disabled />
+                    <div class="parking">
+                      <div class="number">01</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" disabled />
+                    <div class="parking">
+                      <div class="number">02</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">03</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">04</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">05</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">06</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">07</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">08</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">09</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">10</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">11</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">12</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">13</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+                <div class="select-reservation">
+                  <label>
+                    <input type="radio" name="parking" id="parking" />
+                    <div class="parking">
+                      <div class="number">14</div>
+
+                      <img
+                        src="./dist/_astro/car.CUnHoD-D_Z2oJt5n.webp"
+                        alt="car image reference"
+                        loading="lazy"
+                        decoding="async"
+                        fetchpriority="auto"
+                        width="75"
+                        height="134"
+                      />
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </form>
+
+            <div class="flex" data-astro-cid-ithn625t>
+              <button
+                class="simple-button btn secondary block"
+                data-astro-cid-quglckyz
+              >
+                Cancelar
+              </button>
+
+              <button
+                class="simple-button btn primary block"
+                data-astro-cid-quglckyz
+              >
+                Registrar Reserva
+              </button>
+            </div>
           </div>
-
-          <div class="flex">
-            <a href="<%= request.getContextPath() %>/dashboard.jsp"
-               class="simple-button btn secondary block">
-              Cancelar
-            </a>
-            <button type="submit"
-                    class="simple-button btn primary block">
-              Registrar Reserva
-            </button>
-          </div>
-
-        </form>
-
+        </div>
       </div>
     </div>
-
-  </div>
-</div>
-</body>
+  </body>
 </html>
