@@ -39,4 +39,14 @@
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/Logout</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ReservationServlet</display-name>
+    <servlet-name>ReservationServlet</servlet-name>
+    <servlet-class>eparking.servlet.ReservationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReservationServlet</servlet-name>
+    <url-pattern>/reservation</url-pattern>
+  </servlet-mapping>
 </web-app>
